@@ -1,4 +1,0 @@
-techieslikeme
-=============
-
-My personal blog
