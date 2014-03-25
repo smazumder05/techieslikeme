@@ -23,7 +23,7 @@ Any attempt to gather ALL possible requirements at the onset, I believe, will fa
 
 Software requirements and usefulness truly becomes relevant to users once they get to use it. Therefore, the initial versions of any software should satisfy some key requirements and then build from there. As a software matures, its users almost always find more and more innovative ways of applying it into their everyday lives, whether work or personal. Hence, requirements gathering for a software is never really over.
 
-The two main areas of requirements that needs to be covered are functional and nonfunctional or system level requirements.  In this article, I will focus on how some of the key functional software requirements can be hashed out by finding answers to some pointed questions.  I have created this list in github, so please feel free to add any other general questions that might help us formulate better requirements.
+The two main areas of requirements that needs to be covered are functional and nonfunctional or system level requirements.  In this article, I will focus on how some of the key functional software requirements can be hashed out by finding answers to some pointed questions.  [I have created this list in github, so please feel free to add any other general questions that might help us formulate better requirements.](https://github.com/smtechnocrat/softwaredevelopmentproblem/blob/master/functional-requirements.md)
 
 ###Functional
 

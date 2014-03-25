@@ -22,13 +22,13 @@ My Goals for this site
 
 To achieve these goals, I used the following tools:
 
-* Jekyll site generator in order to create a static web site that will be fast and easy to deploy.
-* Bootstrap CSS and widgets for clean CSS and maintainability.
-* Markdown along with Kramdown for text file formatting. This allows me to create my posts in almost plain text that gets converted to HTML.
-* Pygments syntax highlighter
-* Font Awesome for sprite icons.
-* Rake build tool for build and deployment.
-* Optipng image shrinker for making all my image files smaller and faster to load.
+* [Jekyll](http://http://jekyllrb.com/) site generator in order to create a static web site that will be fast and easy to deploy.
+* [Bootstrap](http://http://getbootstrap.com/2.3.2/) CSS and widgets for clean CSS and maintainability.
+* [Markdown](https://daringfireball.net/projects/markdown/) along with Kramdown for text file formatting. This allows me to create my posts in almost plain text that gets converted to HTML.
+* [Pygments](http://pygments.org/) syntax highlighter
+* [Font Awesome](http://fortawesome.github.io/Font-Awesome/) for sprite icons.
+* [Rake](http://rake.rubyforge.org/) build tool for build and deployment.
+* [Optipng](http://optipng.sourceforge.net/) image shrinker for making all my image files smaller and faster to load.
 
 Jekyll is a blog aware static web generator which allows you to publish and maintain a blog by simplymanaging a folder of text files. It is simple to use and does not require any databases, complex javascript or HTML manipulation.
 
