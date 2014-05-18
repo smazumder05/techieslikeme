@@ -2,7 +2,7 @@ title:            Techies Like Me
 description:      A discussion about all thinks techies like
 disqus_shortname: techieslikeme
 #Your site's domain goes here. Leave localhost server or blank when working locally.
-url:              http://localhost:4000
+url:              http://techieslikeme.com
 
 # Owner/author information
 owner:

@@ -2,27 +2,182 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
 <title type="text">Techies Like Me</title>
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
-<link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
-<link rel="alternate" type="text/html" href="http://localhost:4000" />
-<updated>2014-03-24T21:53:30-04:00</updated>
-<id>http://localhost:4000/</id>
+<link rel="self" type="application/atom+xml" href="http://techieslikeme.com/feed.xml" />
+<link rel="alternate" type="text/html" href="http://techieslikeme.com" />
+<updated>2014-05-18T00:18:55-04:00</updated>
+<id>http://techieslikeme.com/</id>
 <author>
   <name>Suvankar Mazumder</name>
-  <uri>http://localhost:4000/</uri>
+  <uri>http://techieslikeme.com/</uri>
   <email>smazumder@gmail.com</email>
 </author>
 
 
 <entry>
+  <title type="html"><![CDATA[The hardest part about software development is to decide what to develop - Part 2]]></title>
+ <link rel="alternate" type="text/html" href="http://techieslikeme.com/the-hardest-part-about-software-development-is-to-decide-what-to-develop-part-2/" />
+  <id>http://techieslikeme.com/the-hardest-part-about-software-development-is-to-decide-what-to-develop-part-2</id>
+  <updated>2014-04-21 14:30:43 -0400T00:00:00-00:00</updated>
+  <published>2014-04-21T00:00:00-04:00</published>
+  
+  <author>
+    <name>Suvankar Mazumder</name>
+    <uri>http://techieslikeme.com</uri>
+    <email>smazumder@gmail.com</email>
+  </author>
+  <content type="html">&lt;blockquote&gt;
+  &lt;h4 id=&quot;a-designer-makes-things-typically-his-making-process-is-complex-there-are-more-variables-kinds-of-possible-moves-norms-and-interrelationships-of-these-than-can-be-represented-in-a-finite-model--donald-a-schon&quot;&gt;“A designer makes things… Typically his making process is complex. There are more variables, kinds of possible moves, norms and interrelationships of these than can be represented in a finite model.” – Donald A Schon.&lt;/h4&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Last  time, &lt;a href=&quot;http://techieslikeme.com/the-hardest-part-about-software-development-is-to-decide-what-to-develop/&quot;&gt;I discussed the importance of understanding the problem domain&lt;/a&gt; and capturing  relevant functional requirements for large scale software development projects. This time, I would like to highlight system or non-functional requirements for a software. Often, these non-functional requirements comes as an afterthought when it often too late,  the highly publicized  performance and scalability  issues with &lt;a href=&quot;https://www.healthcare.gov/&quot;&gt;heathcare.gov website&lt;/a&gt; is perhaps a very good example. Therefore it is essential to include these system level requirements from the very beginning and allocate enough time and effort in the overall software development plan.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/smtechnocrat/softwaredevelopmentproblem/blob/master/System-Level-Requirements.md&quot;&gt;This list is also available in github, so feel free to add any new aspects I may have missed&lt;/a&gt;. The following list is presented in alphabetical order.&lt;/p&gt;
+
+&lt;h3 id=&quot;non-functional-system-level-requirements&quot;&gt;Non-functional System Level Requirements.&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;b&gt;Availability&lt;/b&gt; - Desired up-time during which the system and data are available for use. What are the availability requirements?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;b&gt;Batch Processing and feeds&lt;/b&gt; - Is there any requirement for batch processing or nightly data feeds from other systems?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;b&gt;Communications Interfaces&lt;/b&gt; - Any communication functions the system will use needs to be documented. (example – web browsers). [The system uses HTTP protocol to communicate with the servers. Users use HTTPS (secure site) to login to the system.]&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;b&gt;Configurability&lt;/b&gt; - what aspects of the system can be configured? 
+    &lt;ul&gt;
+      &lt;li&gt;How will be configuration be managed?&lt;/li&gt;
+      &lt;li&gt;Who can configure the system and when?&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;b&gt;Data Visibility&lt;/b&gt; – What are the data visibility requirements ?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;b&gt;Data Versioning and or temporal aspects&lt;/b&gt; - 
+    &lt;ul&gt;
+      &lt;li&gt;Does the system need to answer time sensitive questions related to its state?&lt;/li&gt;
+      &lt;li&gt;Does the data needs to be versioned? &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;b&gt;Design and Implementation Constraints&lt;/b&gt; – Issues that will restrict the options available to the development team, including the reason for the constraint (example – technology choice).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;b&gt;Deployment Topology&lt;/b&gt; – 
+    &lt;ul&gt;
+      &lt;li&gt;Where do we need to deploy the system to ? &lt;/li&gt;
+      &lt;li&gt;What are the deployment constraints, procedures and support ? &lt;/li&gt;
+      &lt;li&gt;What will be the proposed deployment topology ? &lt;/li&gt;
+      &lt;li&gt;Do we need a Content Delivery Network?&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;b&gt;Documentation&lt;/b&gt; - Describe the purpose, desired contents, level of detail, and formatting (User Manuals, Installation Guides, Online Documentation and Help Systems and Labeling and Packaging&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;b&gt;Efficiency&lt;/b&gt; - How well the system utilizes resources such as memory, disk space, etc.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;b&gt;Entitlements&lt;/b&gt; - what features of the system needs to be entitled?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;b&gt;Failover and Recovery&lt;/b&gt; – How will the system recover from hardware failure,  software failure, load and peak loads? &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;b&gt;Flexibility&lt;/b&gt; - How much effort is needed to add new capabilities to the product? &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;b&gt;Hardware Interfaces&lt;/b&gt; - The characteristics of each interface between the software system and the hardware components of the system. &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;b&gt;Interoperability&lt;/b&gt; - How easily the system can interact with other systems?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;b&gt;Logical Database Requirements&lt;/b&gt; - Requirements for any information that is to be placed into a database, including data models, field types, frequency of use, integrity constraints and accessing capabilities.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;b&gt;Look and Feel&lt;/b&gt; - General requirements that capture how the system will appear? [The User Interface will utilize web pages and adhere to the standards already in place among the web-based applications.]&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;b&gt;Maintainability&lt;/b&gt; - How easy it is to fix a defect or change a requirement in the system after it is deployed? [The system will follow all IT Change Management procedures when maintenance is required.]&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;b&gt;Memory Constraints&lt;/b&gt; - Any constraints on the system based on memory usage? For mobile applications, this aspect will be more relevant.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;b&gt;Operations&lt;/b&gt; - Any operations required by the user? (example – client/user or content management). &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;b&gt;Performance&lt;/b&gt; - Include requirements placed on the software performance or on performance of the human interaction with the software. Describe throughput requirements. 
+    &lt;ul&gt;
+      &lt;li&gt;What kind of load can the system handle ( how many concurrent users/request ? )&lt;/li&gt;
+      &lt;li&gt;How does the system perform during peak loads? &lt;/li&gt;
+      &lt;li&gt;Does the system fail gracefully?&lt;/li&gt;
+      &lt;li&gt;What is the breaking point? &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;b&gt;Portability&lt;/b&gt; - How easily the system can be migrated from one platform to another or one machine to another ?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;b&gt;Reference Data&lt;/b&gt; – What are the reference data requirements for the system ? Where do we get this data from ?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;b&gt;Reliability&lt;/b&gt; - Probability of the software executing without failure for a period of time&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;b&gt;Reusability&lt;/b&gt; - How easily a component of the system can be used by another system?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;b&gt;Robustness&lt;/b&gt; - How well the system needs to function when there is invalid data, defects, or unexpected errors?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;b&gt;Security&lt;/b&gt; - Specify the factors that would protect the software from accidental or malicious access, use, modification, destruction, or disclosure. [e.g. Any file uploads using protocols such as FTP shall be secured using 128 bit encryption.]&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;b&gt;Site Adaptation Requirements&lt;/b&gt; – Requirements specific to where the product software failure, load and peak loads ? will be installed (example – globalization requirements). [e.g. All timestamps shown by the system shall be translated into the local time where the system is installed]&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;b&gt;Software Interfaces&lt;/b&gt; - The use of other required software products and interfaces with the system. [The system must accept orders from other external/internal systems that has different formats, or uses different protocols etc.]&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;b&gt;Software Licensing and Approvals&lt;/b&gt; – What third party software ( both open source and vendor products ) does the system use ? What kind of licenses does each one of these software require ? Note: Open source software licenses also needs to examined since there are major restrictions of use&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;b&gt;Support&lt;/b&gt; - What kind of support will be needed once the system is rolled out ? If deployed globally, how do we organize support teams ?( L1, L2 and L3 )&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;b&gt;Testability&lt;/b&gt; - Ease with which the system can be tested for defects. &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;b&gt;Tools&lt;/b&gt; - What support tools needs to be built ? [ Eg: a tool to add new users ] This is perhaps one of the most important aspects of software development. 
+    &lt;ul&gt;
+      &lt;li&gt;Software Development Lifecycle Management tools&lt;/li&gt;
+      &lt;li&gt;Automated testing tools ( functional, performance, load, failure or break  testing&lt;/li&gt;
+      &lt;li&gt;Metrics gathering tools&lt;/li&gt;
+      &lt;li&gt;Application management tools&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;b&gt;Usability&lt;/b&gt;
+    &lt;ul&gt;
+      &lt;li&gt;How easy is to use for the end users?  &lt;/li&gt;
+      &lt;li&gt;What kind of adoption challenges will the user face?&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://techieslikeme.com/the-hardest-part-about-software-development-is-to-decide-what-to-develop-part-2/&quot;&gt;The hardest part about software development is to decide what to develop - Part 2&lt;/a&gt; was originally published by Suvankar Mazumder at &lt;a href=&quot;http://techieslikeme.com&quot;&gt;Techies Like Me&lt;/a&gt; on April 21, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
   <title type="html"><![CDATA[The hardest part about software development is to decide what to develop]]></title>
- <link rel="alternate" type="text/html" href="http://localhost:4000/the-hardest-part-about-software-development-is-to-decide-what-to-develop/" />
-  <id>http://localhost:4000/the-hardest-part-about-software-development-is-to-decide-what-to-develop</id>
-  <updated>2014-03-24 20:24:17 UTCT00:00:00-00:00</updated>
+ <link rel="alternate" type="text/html" href="http://techieslikeme.com/the-hardest-part-about-software-development-is-to-decide-what-to-develop/" />
+  <id>http://techieslikeme.com/the-hardest-part-about-software-development-is-to-decide-what-to-develop</id>
+  <updated>2014-03-24 16:24:17 -0400T00:00:00-00:00</updated>
   <published>2014-03-24T00:00:00-04:00</published>
   
   <author>
     <name>Suvankar Mazumder</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://techieslikeme.com</uri>
     <email>smazumder@gmail.com</email>
   </author>
   <content type="html">&lt;blockquote&gt;
@@ -40,7 +195,7 @@
 
 &lt;p&gt;Software requirements and usefulness truly becomes relevant to users once they get to use it. Therefore, the initial versions of any software should satisfy some key requirements and then build from there. As a software matures, its users almost always find more and more innovative ways of applying it into their everyday lives, whether work or personal. Hence, requirements gathering for a software is never really over.&lt;/p&gt;
 
-&lt;p&gt;The two main areas of requirements that needs to be covered are functional and nonfunctional or system level requirements.  In this article, I will focus on how some of the key functional software requirements can be hashed out by finding answers to some pointed questions.  I have created this list in github, so please feel free to add any other general questions that might help us formulate better requirements.&lt;/p&gt;
+&lt;p&gt;The two main areas of requirements that needs to be covered are functional and nonfunctional or system level requirements.  In this article, I will focus on how some of the key functional software requirements can be hashed out by finding answers to some pointed questions.  &lt;a href=&quot;https://github.com/smtechnocrat/softwaredevelopmentproblem/blob/master/functional-requirements.md&quot;&gt;I have created this list in github, so please feel free to add any other general questions that might help us formulate better requirements.&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;functional&quot;&gt;Functional&lt;/h3&gt;
 
@@ -129,20 +284,20 @@
 
 &lt;p&gt;Next time, I will cover the &lt;em&gt;non-functional requirements&lt;/em&gt; of any software.  One critical aspect that is often overlooked during requirements gathering is the non-functional system level requirements such as availability, scalability, etc. Therefore, I have also created a list of all non-functional requirements that a system may need to meet. Not all aspects of these non-functional requirements may be applicable for all software but it is useful to have all aspects covered. &lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/the-hardest-part-about-software-development-is-to-decide-what-to-develop/&quot;&gt;The hardest part about software development is to decide what to develop&lt;/a&gt; was originally published by Suvankar Mazumder at &lt;a href=&quot;http://localhost:4000&quot;&gt;Techies Like Me&lt;/a&gt; on March 24, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://techieslikeme.com/the-hardest-part-about-software-development-is-to-decide-what-to-develop/&quot;&gt;The hardest part about software development is to decide what to develop&lt;/a&gt; was originally published by Suvankar Mazumder at &lt;a href=&quot;http://techieslikeme.com&quot;&gt;Techies Like Me&lt;/a&gt; on March 24, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[How I build this site?]]></title>
- <link rel="alternate" type="text/html" href="http://localhost:4000/how-i-built-this-site/" />
-  <id>http://localhost:4000/how-i-built-this-site</id>
-  <updated>2014-03-24 20:19:09 UTCT00:00:00-00:00</updated>
+ <link rel="alternate" type="text/html" href="http://techieslikeme.com/how-i-built-this-site/" />
+  <id>http://techieslikeme.com/how-i-built-this-site</id>
+  <updated>2014-03-24 16:19:09 -0400T00:00:00-00:00</updated>
   <published>2014-01-14T00:00:00-05:00</published>
   
   <author>
     <name>Suvankar Mazumder</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://techieslikeme.com</uri>
     <email>smazumder@gmail.com</email>
   </author>
   <content type="html">&lt;h3 id=&quot;yes-i-used-jekyll-to-build-this-site-if-you-havent-used-a-static-web-generator-to-create-a-website-before-then-here-is-one-for-you-to-try&quot;&gt;Yes, I used Jekyll to build this site. If you haven’t used a static web generator to create a website before then here is one for you to try.&lt;/h3&gt;
@@ -160,13 +315,13 @@
 &lt;p&gt;To achieve these goals, I used the following tools:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Jekyll site generator in order to create a static web site that will be fast and easy to deploy.&lt;/li&gt;
-  &lt;li&gt;Bootstrap CSS and widgets for clean CSS and maintainability.&lt;/li&gt;
-  &lt;li&gt;Markdown along with Kramdown for text file formatting. This allows me to create my posts in almost plain text that gets converted to HTML.&lt;/li&gt;
-  &lt;li&gt;Pygments syntax highlighter&lt;/li&gt;
-  &lt;li&gt;Font Awesome for sprite icons.&lt;/li&gt;
-  &lt;li&gt;Rake build tool for build and deployment.&lt;/li&gt;
-  &lt;li&gt;Optipng image shrinker for making all my image files smaller and faster to load.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; site generator in order to create a static web site that will be fast and easy to deploy.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://http://getbootstrap.com/2.3.2/&quot;&gt;Bootstrap&lt;/a&gt; CSS and widgets for clean CSS and maintainability.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://daringfireball.net/projects/markdown/&quot;&gt;Markdown&lt;/a&gt; along with Kramdown for text file formatting. This allows me to create my posts in almost plain text that gets converted to HTML.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://pygments.org/&quot;&gt;Pygments&lt;/a&gt; syntax highlighter&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://fortawesome.github.io/Font-Awesome/&quot;&gt;Font Awesome&lt;/a&gt; for sprite icons.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://rake.rubyforge.org/&quot;&gt;Rake&lt;/a&gt; build tool for build and deployment.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://optipng.sourceforge.net/&quot;&gt;Optipng&lt;/a&gt; image shrinker for making all my image files smaller and faster to load.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Jekyll is a blog aware static web generator which allows you to publish and maintain a blog by simplymanaging a folder of text files. It is simple to use and does not require any databases, complex javascript or HTML manipulation.&lt;/p&gt;
@@ -183,20 +338,20 @@
 
 &lt;p&gt;Finally, a word regarding hosting this blog, I initially used a hosting service provider but then migrated this site to Heruku. You can obviously use Github to host your site. Heruku by default does not seem to support static site hosting but a simple trick will make it think that this is a PHP site and your site will be hosted immediately. All you need to do is to insert a small .php file in your site, no need to put any PHP code inside this file.&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/how-i-built-this-site/&quot;&gt;How I build this site?&lt;/a&gt; was originally published by Suvankar Mazumder at &lt;a href=&quot;http://localhost:4000&quot;&gt;Techies Like Me&lt;/a&gt; on January 14, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://techieslikeme.com/how-i-built-this-site/&quot;&gt;How I build this site?&lt;/a&gt; was originally published by Suvankar Mazumder at &lt;a href=&quot;http://techieslikeme.com&quot;&gt;Techies Like Me&lt;/a&gt; on January 14, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Welcome to Techies Like Me]]></title>
- <link rel="alternate" type="text/html" href="http://localhost:4000/welcome-to-techies-like-me/" />
-  <id>http://localhost:4000/welcome-to-techies-like-me</id>
-  <updated>2014-01-08 19:25:46 UTCT00:00:00-00:00</updated>
+ <link rel="alternate" type="text/html" href="http://techieslikeme.com/welcome-to-techies-like-me/" />
+  <id>http://techieslikeme.com/welcome-to-techies-like-me</id>
+  <updated>2014-01-08 14:25:46 -0500T00:00:00-00:00</updated>
   <published>2014-01-08T00:00:00-05:00</published>
   
   <author>
     <name>Suvankar Mazumder</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://techieslikeme.com</uri>
     <email>smazumder@gmail.com</email>
   </author>
   <content type="html">&lt;h3 id=&quot;this-is-my-personal-blog-for-matters-relating-to-software-development-over-the-years-i-have-worked-on-multiple-large-scale-software-projects-for-various-institutions-and-research-organizations-and-finally-got-to-work-on-sharing-my-experiences-and-thoughts&quot;&gt;This is my personal blog for matters relating to software development. Over the years, I have worked on multiple large scale software projects for various institutions and research organizations and finally got to work on sharing my experiences and thoughts.&lt;/h3&gt;
@@ -207,7 +362,7 @@ I would also like to take this opportunity to thank Michael Rose for providing t
 &lt;h3 id=&quot;stay-tuned&quot;&gt;Stay tuned…&lt;/h3&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/welcome-to-techies-like-me/&quot;&gt;Welcome to Techies Like Me&lt;/a&gt; was originally published by Suvankar Mazumder at &lt;a href=&quot;http://localhost:4000&quot;&gt;Techies Like Me&lt;/a&gt; on January 08, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://techieslikeme.com/welcome-to-techies-like-me/&quot;&gt;Welcome to Techies Like Me&lt;/a&gt; was originally published by Suvankar Mazumder at &lt;a href=&quot;http://techieslikeme.com&quot;&gt;Techies Like Me&lt;/a&gt; on January 08, 2014.&lt;/p&gt;</content>
 </entry>
 
 </feed>
